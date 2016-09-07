@@ -18,8 +18,11 @@ angular.module('insight.currency').controller('CurrencyController',
 
         var response;
 
-        if (this.symbol === 'EUR') {
-          response = _roundFloat((value * this.factor), 2);
+        if (this.symbol === 'BTC') {
+          response = _roundFloat((value * this.factor), 8);
+        } else if (this.symbol === 'NLG') {
+		  this.factor = 1;
+		  response = _roundFloat((value * this.factor), 8);
         } else if (this.symbol === 'mNLG') {
           this.factor = 1000;
           response = _roundFloat((value * this.factor), 5);
@@ -43,10 +46,12 @@ angular.module('insight.currency').controller('CurrencyController',
       $rootScope.currency.symbol = currency;
       localStorage.setItem('insight-currency', currency);
 
-      if (currency === 'EUR') {
+      if (currency === 'BTC') {
         Currency.get({}, function(res) {
           $rootScope.currency.factor = $rootScope.currency.bitstamp = res.data.bitstamp;
         });
+	  } else if (currency === 'NLG') {
+		$rootScope.currency.factor = 1;
       } else if (currency === 'mNLG') {
         $rootScope.currency.factor = 1000;
       } else if (currency === 'bits') {
