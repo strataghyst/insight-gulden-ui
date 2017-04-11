@@ -25,15 +25,15 @@ angular.module('insight').config(function($routeProvider) {
       title: 'Home'
     }).
     when('/blocks', {
-      templateUrl: '/views/block_list.html',
+      templateUrl: 'views/block_list.html',
       title: 'Gulden Blocks solved Today'
     }).
     when('/blocks-date/:blockDate/:startTimestamp?', {
-      templateUrl: '/views/block_list.html',
+      templateUrl: 'views/block_list.html',
       title: 'Gulden Blocks solved '
     }).
     when('/address/:addrStr', {
-      templateUrl: '/views/address.html',
+      templateUrl: 'views/address.html',
       title: 'Gulden Address '
     }).
     when('/status', {
