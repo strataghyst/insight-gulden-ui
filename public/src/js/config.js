@@ -4,8 +4,8 @@
 angular.module('insight').config(function($routeProvider) {
   $routeProvider.
     when('/block/:blockHash', {
-      templateUrl: 'views/block.html',
-      title: 'Bitcoin Block '
+      templateUrl: '/views/block.html',
+      title: 'Gulden Block '
     }).
     when('/block-index/:blockHeight', {
       controller: 'BlocksController',
@@ -16,24 +16,25 @@ angular.module('insight').config(function($routeProvider) {
       title: 'Broadcast Raw Transaction'
     }).
     when('/tx/:txId/:v_type?/:v_index?', {
-      templateUrl: 'views/transaction.html',
-      title: 'Bitcoin Transaction '
+      templateUrl: '/views/transaction.html',
+      title: 'Gulden Transaction '
+
     }).
     when('/', {
       templateUrl: 'views/index.html',
       title: 'Home'
     }).
     when('/blocks', {
-      templateUrl: 'views/block_list.html',
-      title: 'Bitcoin Blocks solved Today'
+      templateUrl: '/views/block_list.html',
+      title: 'Gulden Blocks solved Today'
     }).
     when('/blocks-date/:blockDate/:startTimestamp?', {
-      templateUrl: 'views/block_list.html',
-      title: 'Bitcoin Blocks solved '
+      templateUrl: '/views/block_list.html',
+      title: 'Gulden Blocks solved '
     }).
     when('/address/:addrStr', {
-      templateUrl: 'views/address.html',
-      title: 'Bitcoin Address '
+      templateUrl: '/views/address.html',
+      title: 'Gulden Address '
     }).
     when('/status', {
       templateUrl: 'views/status.html',

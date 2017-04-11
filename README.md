@@ -1,6 +1,8 @@
 # Insight UI
 
-A Bitcoin blockchain explorer web application service for [Bitcore Node](https://github.com/bitpay/bitcore-node) using the [Insight API](https://github.com/bitpay/insight-api).
+*insight* is an open-source Gulden blockchain explorer with complete REST
+and websocket APIs. Insight runs in NodeJS, uses AngularJS for the
+front-end and LevelDB for storage.
 
 ## Quick Start
 
