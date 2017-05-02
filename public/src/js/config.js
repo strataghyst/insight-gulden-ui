@@ -4,7 +4,7 @@
 angular.module('insight').config(function($routeProvider) {
   $routeProvider.
     when('/block/:blockHash', {
-      templateUrl: '/views/block.html',
+      templateUrl: 'views/block.html',
       title: 'Gulden Block '
     }).
     when('/block-index/:blockHeight', {
@@ -16,9 +16,8 @@ angular.module('insight').config(function($routeProvider) {
       title: 'Broadcast Raw Transaction'
     }).
     when('/tx/:txId/:v_type?/:v_index?', {
-      templateUrl: '/views/transaction.html',
+      templateUrl: 'views/transaction.html',
       title: 'Gulden Transaction '
-
     }).
     when('/', {
       templateUrl: 'views/index.html',
@@ -75,4 +74,4 @@ angular.module('insight')
       $location.hash($routeParams.scrollTo);
       $anchorScroll();
     });
-  });
+});
