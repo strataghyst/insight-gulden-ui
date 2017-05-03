@@ -18,7 +18,7 @@ var InsightUI = function(options) {
   }
 };
 
-InsightUI.dependencies = ['insight-api'];
+InsightUI.dependencies = ['insight-gulden-api'];
 
 inherits(InsightUI, BaseService);
 

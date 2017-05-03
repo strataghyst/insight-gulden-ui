@@ -13,12 +13,12 @@ Please see the guide at [https://bitcore.io/guides/full-node](https://bitcore.io
 To manually install all of the necessary components, you can run these commands:
 
 ```bash
-npm install -g bitcore-node
-bitcore-node create mynode
+npm install -g bitcore-gulden-node
+bitcore-gulden-node create mynode
 cd mynode
-bitcore-node install insight-api
-bitcore-node install insight-ui
-bitcore-node start
+bitcore-gulden-node install insight-gulden-api
+bitcore-gulden-node install insight-gulden-ui
+bitcore-gulden-node start
 ```
 
 Open a web browser to `http://localhost:3001/insight/`
